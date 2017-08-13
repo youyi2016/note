@@ -16,3 +16,6 @@ git log --graph --pretty=oneline --abbrev-commit
 git config --global alias.st status 配置别名
 cat .git/config  查看当前库配置文件，包含的信息：远程库的地址、所有分支等
 cat .gitconfig 当前用户下的配置文件，包含了所有别名信息，当前用户名和邮箱等信息
+
+git stash 保存工作现场 git会将工作现场保存在某一个地方 通过git stash list可以查看位置
+git stash pop 恢复现场并删除stash内容
