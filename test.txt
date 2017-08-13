@@ -25,5 +25,19 @@ git merge --no-ff -m "merge with no-ff" dev 添加--no-ff会保存合并记录
 git branch -D feature-vulcan 强制删除分支 -D
 
 git merge --no-ff -m "merge with no-ff" dev 添加--no-ff会保存合并记录
+
 当前分支下内容没有提交，git是不允许切换分支的，提交内容或是先stash保存现场之后才能切换分支
 git remote 查看当前远程库的名字 -v 查看远程库的详细地址
+
+多人协助时，clone下来的项目，默认只会有一个master分支，如果需要在其他已经有的分支下工作需要
+创建远程的这个分支。git checkout -b dev origin/dev
+多人协作的工作模式：
+首先，可以试图用git push origin branch-name推送自己的修改；
+如果推送失败，则因为远程分支比你的本地更新，需要先用git pull试图合并；
+如果合并有冲突，则解决冲突，并在本地提交；
+没有冲突或者解决掉冲突后，再用git push origin branch-name推送就能成功！
+如果git pull提示“no tracking information”，则说明本地分支和远程分支的链接关系没有创建，
+用命令git branch --set-upstream branch-name origin/branch-name。
+
+本地新建的分支如果不推送到远程，对其他人就是不可见的；
+ 
