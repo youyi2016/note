@@ -1,0 +1,14 @@
+建立文件，git init 创建版本库（git就可以管理所有的操作：修改、删除、添加等）
+     目录下新增.git文件，git通过此文件跟踪版本库
+与远程库建立联接   
+    git remote add origin  https://github.com/youyi2016/note.git
+    （远程库的名字默认为origin）
+git push 将本地仓库中的文件更新到远程库    
+Git add ""
+Git commit -m ""
+Git diff 查看修改情况 
+Git log 查看所有提交历史 git log --pretty=oneline
+cat 文件名 查看当前文件内容
+git reset --hard Head^ 回退到上一个版本 Head^^回退到上上一个版本 Head~100回退到前100个版本
+git reset --hard 版本id 回退到指定版本 id不需要写全
+git reflog 查看操作记录 历史命令 可以找到所有版本id
