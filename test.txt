@@ -24,3 +24,6 @@ git merge --no-ff -m "merge with no-ff" dev 添加--no-ff会保存合并记录
 每新增一个功能，新建分支，完成之后，提交，合并分支，然后再删除分支。
 git branch -D feature-vulcan 强制删除分支 -D
 
+git merge --no-ff -m "merge with no-ff" dev 添加--no-ff会保存合并记录
+当前分支下内容没有提交，git是不允许切换分支的，提交内容或是先stash保存现场之后才能切换分支
+git remote 查看当前远程库的名字 -v 查看远程库的详细地址
