@@ -19,3 +19,8 @@ cat .gitconfig 当前用户下的配置文件，包含了所有别名信息，�
 git stash 保存工作现场 git会将工作现场保存在某一个地方 通过git stash list可以查看位置
 git stash pop 恢复现场并删除stash内容
 git merge --no-ff -m "merge with no-ff" dev 添加--no-ff会保存合并记录
+
+每修改一个bug，新建分支，修改完成之后，提交，合并到master分支，然后再删除bug分支
+每新增一个功能，新建分支，完成之后，提交，合并分支，然后再删除分支。
+git branch -D feature-vulcan 强制删除分支 -D
+
