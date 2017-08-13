@@ -18,3 +18,4 @@ cat .git/config  查看当前库配置文件，包含的信息：远程库的地
 cat .gitconfig 当前用户下的配置文件，包含了所有别名信息，当前用户名和邮箱等信息
 git merge --no-ff -m "merge with no-ff" dev 添加--no-ff会保存合并记录
 当前分支下内容没有提交，git是不允许切换分支的，提交内容或是先stash保存现场之后才能切换分支
+git remote 查看当前远程库的名字 -v 查看远程库的详细地址
