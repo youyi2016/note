@@ -12,6 +12,7 @@ cat 文件名 查看当前文件内容
 git reset --hard Head^ 回退到上一个版本 Head^^回退到上上一个版本 Head~100回退到前100个版本
 git reset --hard 版本id 回退到指定版本 id不需要写全
 git reflog 查看操作记录 历史命令 可以找到所有版本id
+
 git log --graph --pretty=oneline --abbrev-commit 查看合并情况
 git config --global alias.st status 配置别名
 cat .git/config  查看当前库配置文件，包含的信息：远程库的地址、所有分支等
