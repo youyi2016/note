@@ -44,5 +44,5 @@ git remote 查看当前远程库的名字 -v 查看远程库的详细地址
 git flow
 进行多人协作
 代码整合到develop发现有bug:
-修复发布之后出现的bug:
+修复发布之后出现的bug:hotfix
 多个人同时在修改一个文件:
