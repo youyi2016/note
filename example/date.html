@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+	<script>
+		var arr = ['周日','周一','周二','周三','周四','周五','周六'];
+		var w = new Array('周日','周一','周二','周三','周四','周五','周六');
+		var time = new Date();
+		var day = time.getDay();
+		console.log("今天"+arr[day]);
+		console.log("今天"+w[day]);
+
+		var str = '日一二三四五六';
+   console.log("今天周"+str.charAt(day));
+		
+	</script>
+</body>
+
+</html>
