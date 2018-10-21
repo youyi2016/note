@@ -4,7 +4,7 @@ let dirArr = ['models', 'public', 'routes', 'views'];
 let configArr = ['index'];
 let content = "";
 let subArr = ['img', 'css']
-fs.mkdirSync(`${arguments}`)
+// fs.mkdirSync(`${arguments}`)
 dirArr.forEach((item) => {
   fs.mkdirSync(`${arguments}/${item}`, () => {
   })
