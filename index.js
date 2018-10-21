@@ -10,7 +10,8 @@ app.set('view engine', 'ejs')// 设置模板引擎为 ejs
 
 app.use('/', indexRouter)
 app.use('/users', userRouter)
-app.listen(3000)
+// app.listen(3000)
+app.listen(process.env.PORT || 3000);
 // app.listen(port, function () {
 //   console.log(`${pkg.name} listening on port ${port}`)
 // })
