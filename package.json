@@ -2,7 +2,7 @@
   "name": "myblog",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "index.js",
   "author": "youyi",
   "license": "ISC",
   "dependencies": {
