@@ -22,7 +22,7 @@
   },
   "scripts": {
     "test": "istanbul cover _mocha",
-    "start": "cross-env NODE_ENV=production pm2 start index.js --name 'myblog'",
+    "start": "cross-env NODE_ENV=production pm2 start index.js --name 'blog-y'",
     "heroku": "NODE_ENV=production node index"
   },
   "devDependencies": {
