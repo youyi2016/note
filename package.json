@@ -14,6 +14,7 @@
     "express": "^4.16.4",
     "express-session": "^1.15.6",
     "express-winston": "^3.0.1",
+    "lodash": "^4.17.11",
     "marked": "^0.5.1",
     "moment": "^2.22.2",
     "mongolass": "^4.4.0",
