@@ -14,7 +14,7 @@ router.get('/pay', function(req, res) {
 	console.log(JSON.stringify(queryObj))
 	const referer = req.headers.referer
 	// console.log(referer)
-	if(!referer) {
+	if(referer != 'blog-y.herokuapp.com/transfer') {
 		res.send('it is not reliable link')
     return
 	}
