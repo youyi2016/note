@@ -9,28 +9,20 @@
       .login-btn {
 				display: block;
 			}
-
-			div+div {
-				margin-top: 10px;
-			}
 		</style>
 	</head>
 	<body>
-	  <form action="/login" method="post">
-		<p>登录</p>
-		<div>
+	  <form action="/transfer/pay" method="get">
+		<p>转账</p>
 	  <label>
-			用户名：	
+			转账账户：	
 		</label>
-		<input type="text" name="username" value="" >
-	</div>
-	  <div>
+		<input type="text" name="account" value="" >
 		<label>
-			密码：
+			金额：
 		</label>
-		<input type="text" name="password" value="" >
-	</div>
-		<button class="login-btn">登录</button>
+		<input type="text" name="money" value="" >
+		<button class="login-btn">转账</button>
 	</form>
 	</body>
 </html>
