@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title></title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+	<style>
+		input {
+			width: 130px;
+		}
+
+		.btn {
+			cursor: pointer;
+		}
+
+		.text {
+
+		}
+	</style>
+	<script>
+		
+	</script>
+	<body>
+		<input id="textarea-1" onfocus="setCss(this)" type="text" name="" value="这是一个自动让光标定位到文本框的最后面的一个demo" autofocus >
+		<button class="btn" onclick="setCss()">定位光标</button>
+	</body>
+	<script>
+
+    function setCss(opt){
+			// console.log(opt)
+			var sr=document.getElementById("textarea-1");
+			// console.log(sr)
+			// var len=sr.value.length;
+			// var sr = opt;
+			// console.log(sr)
+			var len = sr.value.length;
+			sr.focus();  
+			setSelectionRange(sr,len,len); //将光标定位到文本最后 
+		}
+
+		function setSelectionRange(input, selectionStart, selectionEnd) {
+			if (input.setSelectionRange) {  
+				input.setSelectionRange(selectionStart, selectionEnd); 
+				// input.focus();  
+				// input.setSelectionRange(selectionStart, selectionEnd);  
+			}  
+			else if (input.createTextRange) {  
+				var range = input.createTextRange();  
+				range.collapse(true);  
+				range.moveEnd('character', selectionEnd);  
+				range.moveStart('character', selectionStart);  
+				range.select();  
+			} 
+		} 
+	  
+	</script>
+</html>

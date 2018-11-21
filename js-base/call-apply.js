@@ -1,5 +1,7 @@
 
-//call: 指定的this，和若干个参数的前提下调用函数或方法
+/**
+ * call/apply: 在指定的this，和若干个参数的前提下调用函数或方法
+ */
 
 var foo = {
 	value: 1
@@ -102,8 +104,44 @@ function bar(name, age) {
 	console.log("name:"+name+ " age:"+ age);
 }
 
-bar.call2(null,'youyi','24'); // 1
+// bar.call2(null,'youyi','24'); // 1
 
+
+/*
+*  模拟实现apply方法
+*  apply和call的区别主要是第一个参数之外的参数传递不一样
+*  call方法第一个参数的之外的参数，只能逐个传递
+*  apply方法只能传递数组和类数组
+*/
+
+Function.prototype.apply2 = function(cxt, arr) {
+	// var context = cxt || window
+	var context = cxt
+	context.fn = this
+	var args = []
+	
+	for(var i = 0, len=arr.length; i<len; i++) {
+		args.push(arr[i])
+	}
+	
+	context.fn(...args)
+	delete context.fn
+}
+
+var value = 7
+var foo = {
+	value: 1
+};
+
+function bar(name, age) {
+	console.log(this.value)
+	console.log("name:"+name+ " age:"+ age);
+}
+
+// bar.apply2(this, ['beier', 30])
+
+bar.apply(this,'beier', 30)
+// bar.call(this, 'beier2', 40)
 
 
 
