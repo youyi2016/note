@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title></title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<style>
+			#message,
+			.text,
+			.text2,
+			.text3,
+			.text4 {
+          color: #f00;
+					font-size: 16px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="message">
+			  <div></div>
+		</div>
+		<div class="text2"></div>
+		<div class="text3"> </div>
+		<div class="text4"> </div>
+
+	 <script>
+		  //1、给元素添加内容的方式
+		  var div = document.getElementById('message')
+			// div.firstChild.nodeValue='Some &lt;strong&gt;other&lt;/strong&gt; message'
+			//2、给元素添加内容的方式
+			var ele = document.createElement('div')
+			ele.className = 'text'
+			var textNode = document.createTextNode('hello world')
+			// ele.appendChild(textNode)
+			// document.body.appendChild(ele)
+
+			var div2 = document.getElementsByClassName('text2')[0]
+			var div3= document.getElementsByClassName('text3')[0]
+			var div4= document.getElementsByClassName('text4')[0]
+			
+			div2.innerText = '&lt;a href="#"&gt;你好呀&lt;/a&gt;'
+			div3.innerHTML = '&lt;a href="#"&gt;不好也&lt;/a&gt;'
+			div4.innerHTML = '<a href="#">和呵护</a>'
+
+		</script>
+	</body>
+</html>

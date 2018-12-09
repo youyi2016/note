@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>富文本编辑</title>
+</head>
+
+<body>
+  <iframe src="./content.html" name="richedit" style="width:400px;height:300px;"></iframe>
+  <section class="editable" id="richedit">
+      <h2>标题栏</h2>
+      <nav>导航栏</nav>
+      <article>内容主体部分</article>
+  </section>
+  <script>
+    window.addEventListener('load', function () {
+      window.frames['richedit'].document.designMode = 'on';
+    }, false);
+    
+    //contentEditable
+    $richedit = document.getElementById('richedit');
+    $richedit.contentEditable = 'true';
+
+    //富文本：https://segmentfault.com/a/1190000015148699
+  </script>
+</body>
+</html>

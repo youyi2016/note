@@ -32,17 +32,21 @@
 		item3:'<a href=https://gss0.baidu.com/-4o3dSag_xI4khGko9WTAnF6hhy/zhidao/pic/item/d1160924ab18972b50c86437edcd7b899f510a58.jpg target=_blank title=点击查看大图>点我3</a>'}
 		]
     for(var i = 0; i <lists.length; i++) {
-			var $h1=$("<span class='answer'></span>");
-			var $h2=$("<span class='answer2'></span>");
-			var $h3=$("<span class='answer3'></span>");
-			$h1.html(lists[i].item1)
-			$h2.html(lists[i].item2)
-			$h3.html(lists[i].item3)
-			console.log($h1, $h2, $h3)
-			$('.lists').append($h1)
-			$('.lists').append($h2)
-			$('.lists').append($h3)
-			$('.lists').append('<br>')
+			// var $h1=$("<span class='answer'></span>");
+			// var $h2=$("<span class='answer2'></span>");
+			// var $h3=$("<span class='answer3'></span>");
+			var $h4=$("<span class='answer4'></span>")
+			// $h1.html(lists[i].item1)
+			// $h2.html(lists[i].item2)
+			// $h3.html(lists[i].item3)
+			$h4.html('&lt;a href="#"&gt;hahah&lt;/a&gt;')
+			// console.log($h1, $h2, $h3)
+			// $('.lists').append($h1)
+			// $('.lists').append($h2)
+			// $('.lists').append($h3)
+			$('.lists').append($h4)
+			// $('.lists').append('<br>')
+			// console.log($('.lists').append($("<div></div>").html(str)))
 		}
 	</script>
 </html>
