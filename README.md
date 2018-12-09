@@ -22,7 +22,7 @@
 
 
 
-      #### #安全
+#### #安全
 
 **[crsf模拟伪代码](https://github.com/youyi2016/note/blob/master/js-base/)**
 
