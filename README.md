@@ -6,6 +6,8 @@
 
 **[js执行机制](https://github.com/youyi2016/note/blob/master/js-base/js-process.js)**
 
+**[js之definedProperty](https://github.com/youyi2016/note/blob/master/js-base/js-definedProperty.js)**
+
 
 
 #### #设计模式
@@ -32,3 +34,4 @@
 
 **[快捷复制](https://github.com/youyi2016/note/blob/master/design/chat-copy.js)**
 
+**[读取/设置地址栏url参数](https://github.com/youyi2016/note/blob/master/js-base/util-operate-url.js)**
