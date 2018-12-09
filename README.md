@@ -10,7 +10,7 @@
 
 #### #设计模式
 
-**[职责链模式](https://github.com/youyi2016/note/blob/master/js-base/)**
+**[职责链模式](https://github.com/youyi2016/note/blob/master/js-base/chain-shop.js)**
 
 
 
@@ -24,7 +24,7 @@
 
 #### #安全
 
-**[crsf模拟伪代码](https://github.com/youyi2016/note/blob/master/js-base/)**
+**[crsf模拟伪代码](https://github.com/youyi2016/note/blob/master/routes/)**
 
 
 
