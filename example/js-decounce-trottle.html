@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title></title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+	<body>
+	<label>函数节流：<input type="text" id="throttle"></label>
+	<label>函数防抖：<input type="text" id="debounce"></label>
+
+	</body>
+	<script src="../js-base/js-decounceTrottle.js"></script>
+	<script>
+		function ajax(value) {
+			console.log('获取到数据:', value)
+		}
+	 
+	//  function	throttleAjax(e) {
+	// 	throttle(ajax(e.target.value), 2000)
+	//  }
+
+	//  function	debounceAjax(e) {
+	// 	debounce(ajax(e.target.value), 2000)
+	//  }
+	let throttleAjax = throttle(ajax, 1000)
+  let debounceAjax = debounce(ajax, 1000)
+
+	 let inputT = document.getElementById('throttle')
+    inputT.addEventListener('keyup', function(e) {
+        throttleAjax(e)
+		})
+		
+		let inputD = document.getElementById('debounce')
+    inputD.addEventListener('keyup', function(e) {
+			debounceAjax(e)
+    })
+	 
+	 
+	</script>
+</html>

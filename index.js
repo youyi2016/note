@@ -76,10 +76,10 @@ function originIsAllowed(origin) {
 let connectionsArray = []
 
 function addConnections(connection, id) {
-  this.connection.push({
-		id: id,
-		client: connection
-	})
+  // this.connection.push({
+	// 	id: id,
+	// 	client: connection
+	// })
 }
 
 function getClientConnection() {
@@ -115,7 +115,8 @@ wsServer.on('request', function(request) {
 					console.log(message.utf8Data)
           // const client = this.getClientConnection(message)
 					// client.sendUTF(message.utf8Data);
-					let msg = "I can not understand"
+					count++
+					let msg = "I can not understand"+ " "+ count
 					connection.send(msg)
 			}
 			else if (message.type === 'binary') {

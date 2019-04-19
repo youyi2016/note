@@ -18,3 +18,7 @@ console.log((foo.bar = foo.bar)());
 console.log((false || foo.bar)());
 //示例5
 console.log((foo.bar, foo.bar)());
+
+
+
+

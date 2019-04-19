@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title></title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- <link href="css/style.css" rel="stylesheet"> -->
+	</head>
+	<body>
+	   <button type="button">change</button>
+	</body>
+	<script>
+// let tempArr = [{'name': 'new'}, {'name': '12'}]
+// let tempArr2 = [{'name': 'old'}, {'name': '123'}]
+// function sendSuccess() {
+//   console.log(updateMessage(tempArr))
+// }
+
+// function updateMessage(arr) {
+//   arr.push({'name': 'yoyi'})
+//   return arr
+// }
+
+
+class SocketEvent {
+	constructor() {
+		this.event = {};
+	}
+
+    //监听方法
+    listen(eventName, foo) {
+        if (!Object.keys(this.event).includes(eventName)) {
+            this.event[eventName] = [];
+        }
+        const find = this.event[eventName].find(fn => (foo === fn));
+        if (!find) {
+					console.log('当前 this.event：', this.event)
+            this.event[eventName].push(foo);
+        }
+      // console.log('当前 this.event：', this.event)
+    }
+
+    //移除监听
+    remove(eventName, foo) {
+        if (!Object.keys(this.event).includes(eventName)) {
+            return;
+        }
+        if (!foo) {
+            this.event[eventName] = [];
+        } else {
+            this.event[eventName].forEach((fn, i) => {
+                if (fn === foo) {
+									  console.log('del之前 this.event：', this.event)
+                    this.event[eventName].splice(i, 1);
+                }
+            });
+        }
+      console.log('del之后 this.event：', this.event)
+    }
+
+    //触发方法
+    trigger(data) {
+        const eventName = data.type;
+        const fooList = this.event[eventName];
+        if (!fooList || !fooList.length) {
+            return;
+        }
+        this.event[eventName].forEach(foo => {
+            foo(data);
+        });
+    }
+}
+
+let eventObj = new SocketEvent()
+// eventObj.on('click', this.sendSuccess)
+// let _this = this
+// document.querySelector('button').onclick= function() {
+// 	tempArr = tempArr2
+//   _this.sendSuccess()
+// }
+
+function newData(data) {
+  // return function updateData() {
+		console.log(data.data)
+	// }.bind(this)
+}
+
+eventObj.listen('click', this.newData)
+eventObj.trigger({type:'click', data:[{'name': 'new'}, {'name': '12'}]})
+eventObj.remove('click', this.newData)
+eventObj.listen('click', this.newData)
+eventObj.trigger({type:'click', data:[{'name': 'old'}, {'name': '123'}]})
+console.log(eventObj.event)
+</script>
+</html>

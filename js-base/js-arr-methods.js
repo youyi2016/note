@@ -75,3 +75,26 @@ var fff = {
 }
 eee.splice(1,1, fff)
 console.log(eee)
+
+/**
+ * const a = [1,2,3,4,5,6]
+ * a.mutiple()
+ * [1,2,3,4,5,1,4,9,16,25]
+ */
+ const a = [1,2,3,4,5,6]
+ a.mutiple = function() {
+	 return this.concat(this.map(item=>{
+		 return item*item
+	 }))
+ }
+
+ console.log(a.mutiple())
+
+ const a = [1,2,3,4,5,6]
+//  a.prototype.mutiple = function() {
+// 	 return this.concat(this.map(item=>{
+// 		 return item*item
+// 	 }))
+//  }
+
+//  console.log(new a().mutiple())
